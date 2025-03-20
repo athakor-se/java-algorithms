@@ -7,7 +7,6 @@ public class MathPow {
 
     public static void main(String[] args) {
         System.out.println(power(3, 4));
-        System.out.println(2 ^ 5);
     }
 
     private static int power(int x, int y) {
