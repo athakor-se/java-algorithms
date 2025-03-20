@@ -3,6 +3,7 @@ package other;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class FindDuplicates {
 
@@ -20,9 +21,21 @@ public class FindDuplicates {
         return duplicateElements.stream().mapToInt(Integer::intValue).toArray();
     }
 
+    public static int[] findDuplicaesV2(int[] array) {
+        
+        var duplicateElements = new HashSet<Integer>();
+        return Arrays.stream(array).filter(it -> !duplicateElements.add(it)).toArray();
+    }
+
     public static void main(String[] args) {
         System.out.println(Arrays.toString(FindDuplicates.findDuplicaesV1(new int[]{4, 3, 2, 7, 8, 2, 3, 1})));
         System.out.println(Arrays.toString(FindDuplicates.findDuplicaesV1(new int[]{1, 2, 3, 4, 5})));
         System.out.println(Arrays.toString(FindDuplicates.findDuplicaesV1(new int[]{1, 1, 2, 2, 3, 3})));
+
+        System.out.println("======");
+
+        System.out.println(Arrays.toString(FindDuplicates.findDuplicaesV2(new int[]{4, 3, 2, 7, 8, 2, 3, 1})));
+        System.out.println(Arrays.toString(FindDuplicates.findDuplicaesV2(new int[]{1, 2, 3, 4, 5})));
+        System.out.println(Arrays.toString(FindDuplicates.findDuplicaesV2(new int[]{1, 1, 2, 2, 3, 3})));
     }
 }
