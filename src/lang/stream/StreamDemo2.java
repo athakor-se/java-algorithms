@@ -1,4 +1,4 @@
-package java.stream;
+package lang.stream;
 
 import java.util.Random;
 import java.util.stream.Collectors;

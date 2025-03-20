@@ -1,4 +1,4 @@
-package java;
+package lang;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,22 +7,29 @@ import java.util.Random;
 import java.util.stream.Stream;
 
 public class Main {
+
     static int i = 0; //1
+
     int j = 0; //2
+    
     static {
         System.out.println("In static block" + i);
     } //3
+    
     {
         j = 1;
         System.out.println("In instance initializer block" + j);
     } //4
+    
     {
         j = 2;
         System.out.println("In instance initializer block 2" + j);
     } //5
+    
     public Main() {
         System.out.println("In constructor");
     }
+    
     public static void test() {
         System.out.println("test");
     }

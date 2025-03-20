@@ -1,4 +1,4 @@
-package java.stream;
+package lang.stream;
 
 import java.util.*;
 import java.util.function.Function;
