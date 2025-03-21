@@ -9,7 +9,7 @@ public class MoveZerosToEnd {
         var lastUpdateIndex = -1;
         var transformedArr = new int[array.length];
         for (int i = 0; i < array.length; i++) {
-            if (array[i] > 0) {
+            if (array[i] != 0) {
                 transformedArr[++lastUpdateIndex] = array[i];
             }
         }
